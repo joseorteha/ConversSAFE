@@ -1,0 +1,45 @@
+/* index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos base personalizados */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply m-0 min-h-screen flex items-center justify-center bg-white text-gray-900 dark:bg-zinc-900 dark:text-white;
+}
+
+a {
+  @apply font-medium text-blue-600 hover:text-blue-800;
+}
+
+button {
+  @apply rounded border border-transparent px-4 py-2 font-medium transition-colors;
+}
+button:hover {
+  @apply border-blue-400;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Tema claro preferido */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}

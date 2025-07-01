@@ -1,0 +1,7 @@
+CREATE TABLE IF credentials (
+	id SERIAL PRIMARY KEY,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(60) NOT NULL,
+	salt VARCHAR(16) NOT NULL
+);
+

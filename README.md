@@ -1,54 +1,191 @@
-# React + TypeScript + Vite
+# 🚀 ConversSAFE - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Plataforma colaborativa con IA para equipos**  
+*MVP en desarrollo para No Country Express 2025*
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Descripción del Proyecto
 
-## Expanding the ESLint configuration
+ConversSAFE es una plataforma web que permitirá a equipos comunicarse mediante un chat interno, con una IA que analizará en tiempo real la conversación y sugerirá mejoras para una colaboración más clara y efectiva.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🎯 Características Planificadas
+- 💬 **Chat en tiempo real** para equipos
+- 🤖 **Análisis conversacional** con OpenAI API
+- 📊 **Métricas de colaboración** (tono, participación, claridad)
+- 🎨 **UI moderna y responsiva**
+- ⚡ **Performance optimizada**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🛠️ Stack Tecnológico
+
+### **Frontend:**
+- **React 19.1.0** - Framework principal
+- **TypeScript 5.8.3** - Tipado estático
+- **Vite 6.3.5** - Bundler y dev server
+- **Tailwind CSS 3.4.17** - Framework de estilos
+- **React Router DOM 7.6.3** - Navegación básica
+
+### **Herramientas de Desarrollo:**
+- **ESLint 9.25.0** - Linting básico
+- **TypeScript ESLint** - Reglas básicas para TS
+- **PostCSS & Autoprefixer** - Procesamiento CSS
+
+---
+
+## 🚀 Instalación y Uso
+
+### **Prerrequisitos:**
+- Node.js 18+ 
+- npm o yarn
+
+### **Instalación:**
+```bash
+# Clonar el repositorio
+git clone [URL_DEL_REPO]
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm run dev
+
+# Construir para producción
+npm run build
+
+# Preview de producción
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### **Scripts Disponibles:**
+- `npm run dev` - Servidor de desarrollo
+- `npm run build` - Build de producción
+- `npm run preview` - Preview del build
+- `npm run lint` - Linting del código
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 📁 Estructura del Proyecto
+
 ```
+src/
+├── components/           # Componentes básicos
+│   ├── ChatBox.tsx      # Estructura básica del chat
+│   ├── MessageBubble.tsx # Componente de mensajes
+│   └── NotFound.tsx     # Página 404
+├── pages/               # Páginas principales
+│   ├── Home.tsx         # Página de inicio
+│   └── Dashboard.tsx    # Dashboard (estructura básica)
+├── routes/              # Configuración de rutas
+│   └── AppRoutes.tsx    # Sistema de navegación
+├── features/            # Arquitectura de features
+│   └── emailMarketing/  # Módulo de email marketing
+├── layout/              # Layouts de la aplicación
+├── utils/               # Utilidades
+├── assets/              # Recursos estáticos
+└── App.tsx              # Componente raíz
+```
+
+---
+
+## 🎨 Componentes Principales
+
+### **ChatBox** (En desarrollo)
+- Estructura básica de la interfaz de chat
+- Input para escribir mensajes (deshabilitado)
+- Diseño responsive con Tailwind
+
+### **Dashboard** (En desarrollo)
+- Estructura básica para métricas de IA
+- Preparado para gráficos y datos
+- Diseño base implementado
+
+### **MessageBubble** (Básico)
+- Componente para renderizar mensajes
+- Props básicas implementadas
+- Estilos con Tailwind CSS
+
+---
+
+## 🚀 Rutas de la Aplicación
+
+- `/` - **Home** - Página principal
+- `/dashboard` - **Dashboard** - Estructura básica
+- `/chat` - **ChatBox** - UI estática del chat
+- `/*` - **NotFound** - Página 404
+
+---
+
+## 📊 Estado del Desarrollo
+
+### ✅ **Completado (30%)**
+- Estructura base del proyecto
+- Configuración de herramientas
+- Sistema de rutas básico
+- Arquitectura de carpetas
+
+### 🔄 **En Progreso (20%)**
+- Componentes básicos
+- Páginas principales
+- Estructura de features
+
+### ⏳ **Pendiente (50%)**
+- Funcionalidad del chat
+- Integración con API
+- Dashboard con métricas
+- Testing y deploy
+
+---
+
+## 🤝 Contribución
+
+### **Equipo de Desarrollo:**
+- **José Ortega** - Frontend Developer (Equipo 7)
+
+### **Proceso de Contribución:**
+1. Fork del repositorio
+2. Crear rama feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commit cambios (`git commit -am 'Agregar nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Crear Pull Request
+
+---
+
+## 📝 Reportes
+
+- [📊 Reporte Detallado del Frontend 1](./FRONTEND_REPORT.md)
+
+
+---
+
+## 🎯 Próximos Pasos
+
+### **Prioridad Alta:**
+1. Implementar estado del chat con React hooks
+2. Conectar con API del backend
+3. Agregar funcionalidad real a los componentes
+4. Implementar métricas en el dashboard
+5. Implemtar diseño de Figma
+
+### **Prioridad Media:**
+1. Mejorar UI/UX con componentes reales
+2. Agregar navegación entre páginas
+3. Implementar features de email marketing
+
+---
+
+## 📄 Licencia
+
+Este proyecto es desarrollado para **No Country Express 2025**.
+
+---
+
+## 👨‍💻 Desarrollado por
+
+**José Ortega** - Frontend Developer  
+**Equipo 7** - No Country Express 2025
+
+---
+
+**ConversSAFE** - Haciendo la colaboración más inteligente 🤖✨

@@ -406,13 +406,11 @@
             const username = document.getElementById('username').value;
             
             if (email && password) {
-                // Add loading animation
                 const btn = document.querySelector('.signin-btn');
                 const originalText = btn.textContent;
                 btn.textContent = 'Signing in...';
                 btn.style.background = '#999';
                 
-                // Simulate API call
 				fetch('/signin', {
 					method: 'POST',
 					headers: {

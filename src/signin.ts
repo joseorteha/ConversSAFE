@@ -13,7 +13,7 @@ export async function authenticateUser(username: string, email: string, password
 
 		let result = await db.result(insertNewUserQuery, {
 			username: username,
-			email: email,
+			email: email.toLowerCase(), // Lowercase because all the email services have it as a standard
 			password: hashedPass,
 			salt: salt
 		});

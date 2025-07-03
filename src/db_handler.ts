@@ -6,12 +6,15 @@ import { execSync } from "child_process";
 const DATABASE_NAME = "converSAFE_db";
 const SQL_FILES_FOLDER = resolve(__dirname, "..", "utils", "sql/") + "/";
 
+// Creates a QueryFile object that can be used by "db" for executing
+// queries
 export function sql(fileName: String) {
     const fullPath = SQL_FILES_FOLDER + fileName
     return new pgp.QueryFile(fullPath, {minify: true});
 } 
 
 const initCredentialTablesQuery = sql('schema.sql');
+
 export const db = pgp({
 	host: "localhost",
 	port: 5432,
@@ -31,7 +34,6 @@ export async function initDatabase() {
 	try {
 		await db.none(initCredentialTablesQuery);
 	} catch (error) {
-		console.log(error);
 		process.exit(1);
 	}
 }

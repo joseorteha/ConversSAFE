@@ -1,43 +1,55 @@
+import { useChatStore, type Channel, type Message } from '../stores/chatStore';
+import { useUserStore } from '../stores/userStore';
 import ChatHeader from './ChatHeader';
-import { BsPlusCircleFill } from 'react-icons/bs';
+import MessageInput from './MessageInput';
 
-function Messages({ channelName }: { channelName: string }) {
+type MessagesProps = {
+  channel: Channel;
+  messages: Message[];
+};
+
+function Messages({ channel, messages }: MessagesProps) {
+  const { sendMessageToChannel } = useChatStore();
+  const { user } = useUserStore();
+
+  const handleSendMessage = (message: string) => {
+    sendMessageToChannel(channel.id, {
+      id: crypto.randomUUID(),
+      content: message,
+      timestamp: new Date(),
+      user: {
+        id: user?.id || '0',
+        name: user?.name || 'anónimo',
+      },
+      profilePicture: user?.profilePicture, // Replace with actual profile picture URL
+      sender: 'user',
+    });
+  };
+
   return (
     <div
       className="flex flex-col h-full w-full m-0
     bg-gray-300 dark:bg-gray-700 overflow-hidden"
     >
-      <ChatHeader channelName={channelName} />
+      <ChatHeader channelName={channel.name} />
       <div
-        className="flex flex-col-reverse w-full h-full 
-    mt-0 ml-0"
+        className="flex flex-col w-full h-full justify-end
+    ml-0 overflow-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-300 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-800"
       >
-        <Post
-          name="Kent"
-          timestamp="2 minutos"
-          profilePicture="https://randomuser.me/api/portraits/men/22.jpg"
-          text={`¡Hola a todos! 👋 Me llamo Kent y acabo de incorporarme al equipo. Estoy muy entusiasmado por comenzar a trabajar con ustedes. Si hay algo que deba saber o alguien con quien deba coordinar primero, ¡quedo atento!`}
-        />
-        <Post
-          name="Cintia"
-          timestamp="3 minutos"
-          profilePicture="https://randomuser.me/api/portraits/women/9.jpg"
-          text={`Buenas tardes, ¿alguien sabe si ya se definió la fecha límite para entregar la presentación del proyecto? Quiero asegurarme de que estoy alineado con el resto del equipo. Gracias de antemano 😊`}
-        />
-        <Post
-          name="Klenty"
-          timestamp="6 minutos"
-          profilePicture="https://randomuser.me/api/portraits/women/44.jpg"
-          text={`Equipo, les dejo un breve update: ya terminé con la revisión del módulo de autenticación. Si alguien quiere darle un segundo vistazo o probarlo, está todo subido en la rama feature/login-refactor. ¡Feedback bienvenido!`}
-        />
-        <Post
-          name="Kon"
-          profilePicture="https://randomuser.me/api/portraits/men/1.jpg"
-          timestamp="10 minutos"
-          text={`Hola, ¿les parece si nos reunimos 10-15 minutos mañana a la mañana para alinear tareas de la semana? Propongo 10:00 hs, pero puedo adaptarme. Dejen 👍 si pueden o sugieran otro horario.`}
-        />
+        {messages.map((msg) => (
+          <Post
+            key={msg.id}
+            name={msg.user.name === user?.name ? 'Tú' : msg.user.name}
+            timestamp={msg.timestamp.toLocaleTimeString([], {
+              hour: '2-digit',
+              minute: '2-digit',
+            })}
+            profilePicture={msg.profilePicture}
+            text={msg.content}
+          />
+        ))}
       </div>
-      <BottomBar />
+      <MessageInput onSend={handleSendMessage} />
     </div>
   );
 }
@@ -52,11 +64,11 @@ type PostProps = {
 const Post = ({ name, timestamp, text, profilePicture }: PostProps) => {
   return (
     <div className="w-full flex flex-row py-1 my-3 px-8 m-0 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500 transition-all duration-300 ease-in-out">
-      <div className="flex flex-col items-center w-12 m-0 mb-auto">
+      <div className="flex flex-col items-center w-12 m-0">
         <img
           src={profilePicture}
           alt="avatar"
-          className="flex-none w-12 h-full mb-auto mt-0 mx-0 object-cover 
+          className="flex-none w-12 h-full mt-0 mx-0 object-cover 
     bg-gray-100 rounded-full shadow-md cursor-pointer"
         />
       </div>
@@ -75,23 +87,5 @@ const Post = ({ name, timestamp, text, profilePicture }: PostProps) => {
     </div>
   );
 };
-
-const BottomBar = () => (
-  <div
-    className="flex flex-row items-center justify-between right-8 bottom-2 shadow-lg bg-gray-200 dark:bg-gray-600
-    px-2 h-16"
-  >
-    <BsPlusCircleFill
-      size="22"
-      className="text-green-500 dark:shadow-lg mx-2 dark:text-primary"
-    />
-    <input
-      className="font-semibold w-full ml-0 mr-auto cursor-text
-    bg-transparent outline-none text-gray-500  dark:text-gray-400 placeholder-gray-500"
-      type="text"
-      placeholder="Ingresa un mensaje..."
-    />
-  </div>
-);
 
 export default Messages;

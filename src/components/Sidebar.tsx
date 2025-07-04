@@ -24,7 +24,7 @@ type SideBarIconProps = {
 const SideBarIcon = ({ icon, text = 'test' }: SideBarIconProps) => (
   <div
     className="relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto
-    bg-gray-200 hover:bg-green-600 dark:bg-gray-800 text-green-600 hover:text-white 
+    bg-gray-200 dark:bg-gray-800 text-green-600 hover:text-white 
     rounded-xl transition-all duration-300 ease-linear cursor-pointer shadow-lg group"
   >
     {icon}

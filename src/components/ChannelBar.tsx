@@ -10,7 +10,9 @@ function ChannelBar({ server, topics }: ChannelBarProps) {
     <div className="w-80 h-auto m-0 ml-16 bg-gray-200 dark:bg-gray-800 overflow-hidden shadow-lg">
       <ChannelBlock serverName={server} />
       <div className="flex flex-col justify-start p-1 m-0">
-        <div>{topics && topics.map((topic) => <Topic topic={topic} />)}</div>
+        <div>
+          {topics && topics.map((topic) => <Topic topic={topic} key={topic} />)}
+        </div>
       </div>
     </div>
   );

@@ -1,10 +1,30 @@
 import React from 'react';
+import DashboardHeader from '../components/DashboardHeader';
+import StatCard from '../components/StatCard';
+import ParticipationChart from '../components/ParticipationChart';
+import SuggestionsPanel from '../components/SuggestionsPanel';
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="p-8">
-      <h2 className="text-2xl font-bold mb-4">Dashboard de ConversSAFE</h2>
-      <p className="text-gray-600">Aquí verás las métricas e insights generados por la IA.</p>
+    <div className="h-full bg-primary p-6 overflow-y-auto">
+      <DashboardHeader />
+      <div className="grid grid-cols-12 gap-6 mt-6">
+        {/* Main content area */}
+        <div className="col-span-12 lg:col-span-8 space-y-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <StatCard value="28" label="Temas tratados" />
+            <StatCard value="20%" label="Frases positivas" />
+            <StatCard value="64" label="Decisiones tomadas" isHighlighted />
+            <StatCard value="10" label="Alertas de comunicación ineficiente" alertCount={2} />
+          </div>
+          <ParticipationChart />
+        </div>
+
+        {/* Suggestions Panel */}
+        <div className="col-span-12 lg:col-span-4">
+          <SuggestionsPanel />
+        </div>
+      </div>
     </div>
   );
 };

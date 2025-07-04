@@ -1,0 +1,972 @@
+Directory structure:
+└── joseorteha-converssafe/
+    ├── README.md
+    ├── package.json
+    ├── tsconfig.json
+    ├── public/
+    │   └── signin.html
+    ├── src/
+    │   ├── db_handler.ts
+    │   ├── login.ts
+    │   ├── main.ts
+    │   └── signin.ts
+    └── utils/
+        └── sql/
+            ├── login.sql
+            ├── schema.sql
+            └── signin.sql
+
+================================================
+FILE: README.md
+================================================
+# 🧠 ConversSAFE - Colaboración Inteligente para Equipos
+
+> 🚧 **MVP en construcción - Participando en la Convocatoria Express 2025**
+
+![Conversación IA](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExazhkNXN6Yjd4empyMThnMjdseDRjbXl3b3FwcHd6NGk2ZmR1MmN0bCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xUPGcguWZHRC2HyBRS/giphy.gif)
+
+ConversSAFE es una plataforma que busca mejorar la forma en que los equipos colaboran digitalmente, utilizando inteligencia artificial para brindar *feedback* útil en tiempo real. La IA analiza las conversaciones dentro del equipo y sugiere mejoras como: aclarar mensajes confusos, detectar silencios prolongados o prevenir malentendidos.
+
+---
+
+## ✨ ¿Qué hace especial a ConversSAFE?
+
+⚡ Comunicación con propósito
+🧠 Análisis en tiempo real con IA
+📊 Dashboard visual para métricas como tono, participación y claridad
+🔁 Feedback constructivo automático durante las conversaciones
+
+> 🗨️ "Detecté un cambio de tono en el chat... ¿quieren tomar una pausa?"
+
+---
+
+## 🛠️ Stack Tecnológico (Propuesto)
+
+**Frontend**
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge\&logo=react\&logoColor=61DAFB)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-0ea5e9?style=for-the-badge\&logo=tailwindcss\&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-fefefe?style=for-the-badge\&logo=chartdotjs\&logoColor=FF6384)
+
+**Backend**
+![Express](https://img.shields.io/badge/Express.js-404d59?style=for-the-badge)
+
+**IA**
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge\&logo=openai\&logoColor=white)
+
+**Infraestructura**
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge\&logo=netlify\&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge)
+
+**Colaboración**
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge\&logo=figma\&logoColor=white)
+![Trello](https://img.shields.io/badge/Trello-0052CC?style=for-the-badge\&logo=trello\&logoColor=white)
+![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge\&logo=discord\&logoColor=white)
+
+---
+
+## 📦 Funcionalidades Planeadas
+
+* 🔹 Chat en tiempo real con diseño moderno
+* 🔹 IA que analiza mensajes: tono, participación, claridad
+* 🔹 Dashboard visual con métricas útiles
+* 🔹 Sugerencias automáticas en la conversación
+* 🔹 Deploy online (Netlify + Render)
+
+---
+
+## 🧱 Arquitectura Propuesta
+
+```
+Frontend (React + Tailwind)
+│
+├── Chat (feedback IA en tiempo real)
+├── Dashboard (Chart.js)
+
+Backend (Express)
+│
+├── Rutas API (mensajes, análisis IA)
+├── Integración con OpenAI
+
+Infraestructura
+├── Frontend: Netlify
+└── Backend: Render
+```
+
+---
+
+## 🧑‍💻 Equipo y Roles
+
+| Nombre          | Rol            | Correo                                                    |
+| --------------- | -------------- | --------------------------------------------------------- |
+| Alexis Checura  | Frontend       | [alexischecura@gmail.com](mailto:alexischecura@gmail.com) |
+| José Ortega     | Frontend       | [joseortegahac@gmail.com](mailto:joseortegahac@gmail.com) |
+| Matías Alarcón  | Backend        | [lex0ss2062@gmail.com](mailto:lex0ss2062@gmail.com)       |
+| Romina González | UX/UI Designer | [rommirose97@gmail.com](mailto:rommirose97@gmail.com)     |
+
+---
+
+## 🧪 Fase Inicial
+
+> ✨ Aún no hay código, estamos en planificación ✨
+
+📌 Etapa actual:
+
+* Brainstorming del MVP ✅
+* Diseño de funcionalidades ✅
+* División de roles y organización del equipo ✅
+* Wireframes y arquitectura en proceso ✍️
+
+🎯 Objetivo: Tener un MVP funcional y deployado para el **04/07/2025**
+
+---
+
+## 📅 Cronograma Express
+
+| Día   | Actividades                                        |
+| ----- | -------------------------------------------------- |
+| 30/06 | Kickoff + definición del MVP + wireframes en Figma |
+| 01/07 | Diseño UI + setup inicial de frontend y backend    |
+| 02/07 | Integración IA + dashboard de métricas             |
+| 03/07 | Pruebas + ajustes finales + pitch                  |
+| 04/07 | Deploy + presentación (Demo Day 19:00 ARG)         |
+
+---
+
+## ✅ Check de Evaluación del Brief
+
+* [ ] Chat funcional
+* [ ] Feedback de IA en tiempo real
+* [ ] Dashboard de métricas
+* [ ] Deploy accesible
+* [ ] Diseño atractivo (UX/UI)
+* [ ] Trabajo en equipo
+* [ ] Documentación clara
+
+---
+
+## 🧠 Extra: ¿Cómo se verá ConversSAFE?
+
+![IA analysis](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDQ4aXAzcm0xbzhiaWlnNnE1MXI5YjE4bmF0c3VpZXJvOHFiYmZsaiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xUPGcL1LdM9pmYmH20/giphy.gif)
+
+*"Un equipo que se comunica bien, construye mejor."*
+
+---
+
+## 🤝 Colabora
+
+* Realiza commits con mensajes claros
+* Reporta avances en Discord
+* Actualiza este README si haces mejoras
+
+---
+
+¡Gracias por leer! Esto apenas comienza.
+**#TeamConversSAFE 🚀**
+
+
+
+
+================================================
+FILE: package.json
+================================================
+{
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "https": "^1.0.0",
+    "pg-promise": "^11.14.0",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.8",
+    "@types/pg-promise": "^0.0.28"
+  }
+}
+
+
+
+================================================
+FILE: tsconfig.json
+================================================
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+    /* Projects */
+    // "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
+    // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
+    // "tsBuildInfoFile": "./.tsbuildinfo",              /* Specify the path to .tsbuildinfo incremental compilation file. */
+    // "disableSourceOfProjectReferenceRedirect": true,  /* Disable preferring source files instead of declaration files when referencing composite projects. */
+    // "disableSolutionSearching": true,                 /* Opt a project out of multi-project reference checking when editing. */
+    // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
+
+    /* Language and Environment */
+    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    // "jsx": "preserve",                                /* Specify what JSX code is generated. */
+    // "libReplacement": true,                           /* Enable lib replacement. */
+    // "experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
+    // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
+    // "jsxFactory": "",                                 /* Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h'. */
+    // "jsxFragmentFactory": "",                         /* Specify the JSX Fragment reference used for fragments when targeting React JSX emit e.g. 'React.Fragment' or 'Fragment'. */
+    // "jsxImportSource": "",                            /* Specify module specifier used to import the JSX factory functions when using 'jsx: react-jsx*'. */
+    // "reactNamespace": "",                             /* Specify the object invoked for 'createElement'. This only applies when targeting 'react' JSX emit. */
+    // "noLib": true,                                    /* Disable including any library files, including the default lib.d.ts. */
+    // "useDefineForClassFields": true,                  /* Emit ECMAScript-standard-compliant class fields. */
+    // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
+
+    /* Modules */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+     "rootDir": "./src",                                  /* Specify the root folder within your source files. */
+    // "moduleResolution": "node10",                     /* Specify how TypeScript looks up a file from a given module specifier. */
+    // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
+    // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+    // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
+    // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
+    // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
+    // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
+    // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */
+    // "allowImportingTsExtensions": true,               /* Allow imports to include TypeScript file extensions. Requires '--moduleResolution bundler' and either '--noEmit' or '--emitDeclarationOnly' to be set. */
+    // "rewriteRelativeImportExtensions": true,          /* Rewrite '.ts', '.tsx', '.mts', and '.cts' file extensions in relative import paths to their JavaScript equivalent in output files. */
+    // "resolvePackageJsonExports": true,                /* Use the package.json 'exports' field when resolving package imports. */
+    // "resolvePackageJsonImports": true,                /* Use the package.json 'imports' field when resolving imports. */
+    // "customConditions": [],                           /* Conditions to set in addition to the resolver-specific defaults when resolving imports. */
+    // "noUncheckedSideEffectImports": true,             /* Check side effect imports. */
+    // "resolveJsonModule": true,                        /* Enable importing .json files. */
+    // "allowArbitraryExtensions": true,                 /* Enable importing files with any extension, provided a declaration file is present. */
+    // "noResolve": true,                                /* Disallow 'import's, 'require's or '<reference>'s from expanding the number of files TypeScript should add to a project. */
+
+    /* JavaScript Support */
+    // "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
+    // "checkJs": true,                                  /* Enable error reporting in type-checked JavaScript files. */
+    // "maxNodeModuleJsDepth": 1,                        /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */
+
+    /* Emit */
+    // "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
+    // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
+     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
+    // "inlineSourceMap": true,                          /* Include sourcemap files inside the emitted JavaScript. */
+    // "noEmit": true,                                   /* Disable emitting files from a compilation. */
+    // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
+     "outDir": "./build",                                   /* Specify an output folder for all emitted files. */
+    // "removeComments": true,                           /* Disable emitting comments. */
+    // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
+    // "downlevelIteration": true,                       /* Emit more compliant, but verbose and less performant JavaScript for iteration. */
+    // "sourceRoot": "",                                 /* Specify the root path for debuggers to find the reference source code. */
+    // "mapRoot": "",                                    /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "inlineSources": true,                            /* Include source code in the sourcemaps inside the emitted JavaScript. */
+    // "emitBOM": true,                                  /* Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files. */
+    // "newLine": "crlf",                                /* Set the newline character for emitting files. */
+    // "stripInternal": true,                            /* Disable emitting declarations that have '@internal' in their JSDoc comments. */
+    // "noEmitHelpers": true,                            /* Disable generating custom helper functions like '__extends' in compiled output. */
+    // "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
+    // "preserveConstEnums": true,                       /* Disable erasing 'const enum' declarations in generated code. */
+    // "declarationDir": "./",                           /* Specify the output directory for generated declaration files. */
+
+    /* Interop Constraints */
+    // "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
+    // "verbatimModuleSyntax": true,                     /* Do not transform or elide any imports or exports not marked as type-only, ensuring they are written in the output file's format based on the 'module' setting. */
+    // "isolatedDeclarations": true,                     /* Require sufficient annotation on exports so other tools can trivially generate declaration files. */
+    // "erasableSyntaxOnly": true,                       /* Do not allow runtime constructs that are not part of ECMAScript. */
+    // "allowSyntheticDefaultImports": true,             /* Allow 'import x from y' when a module doesn't have a default export. */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+
+    /* Type Checking */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+    // "strictNullChecks": true,                         /* When type checking, take into account 'null' and 'undefined'. */
+    // "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
+    // "strictBindCallApply": true,                      /* Check that the arguments for 'bind', 'call', and 'apply' methods match the original function. */
+    // "strictPropertyInitialization": true,             /* Check for class properties that are declared but not set in the constructor. */
+    // "strictBuiltinIteratorReturn": true,              /* Built-in iterators are instantiated with a 'TReturn' type of 'undefined' instead of 'any'. */
+    // "noImplicitThis": true,                           /* Enable error reporting when 'this' is given the type 'any'. */
+    // "useUnknownInCatchVariables": true,               /* Default catch clause variables as 'unknown' instead of 'any'. */
+    // "alwaysStrict": true,                             /* Ensure 'use strict' is always emitted. */
+    // "noUnusedLocals": true,                           /* Enable error reporting when local variables aren't read. */
+    // "noUnusedParameters": true,                       /* Raise an error when a function parameter isn't read. */
+    // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
+    // "noImplicitReturns": true,                        /* Enable error reporting for codepaths that do not explicitly return in a function. */
+    // "noFallthroughCasesInSwitch": true,               /* Enable error reporting for fallthrough cases in switch statements. */
+    // "noUncheckedIndexedAccess": true,                 /* Add 'undefined' to a type when accessed using an index. */
+    // "noImplicitOverride": true,                       /* Ensure overriding members in derived classes are marked with an override modifier. */
+    // "noPropertyAccessFromIndexSignature": true,       /* Enforces using indexed accessors for keys declared using an indexed type. */
+    // "allowUnusedLabels": true,                        /* Disable error reporting for unused labels. */
+    // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
+
+    /* Completeness */
+    // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+  }
+}
+
+
+
+================================================
+FILE: public/signin.html
+================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            padding: 60px 50px;
+            width: 100%;
+            max-width: 450px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .logo p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-group input:hover {
+            border-color: #c1c9d2;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 38px;
+            cursor: pointer;
+            color: #666;
+            user-select: none;
+            transition: color 0.3s ease;
+        }
+
+        .password-toggle:hover {
+            color: #667eea;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .remember-me input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .forgot-password {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password:hover {
+            color: #764ba2;
+        }
+
+        .signin-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .signin-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .signin-btn:active {
+            transform: translateY(0);
+        }
+
+        .signin-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .signin-btn:hover::before {
+            left: 100%;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+            color: #666;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e1e5e9;
+        }
+
+        .divider span {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .social-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-btn {
+            padding: 12px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .social-btn:hover {
+            border-color: #c1c9d2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-link {
+            text-align: center;
+            color: #666;
+        }
+
+        .signup-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            color: #764ba2;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 30px;
+                margin: 10px;
+            }
+            
+            .logo h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <h1>Welcome</h1>
+            <p>Sign in to your account</p>
+        </div>
+
+        <form id="signinForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="username" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span class="password-toggle" onclick="togglePassword()">👁️</span>
+            </div>
+
+            <div class="form-options">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+
+        <div class="divider">
+            <span>or continue with</span>
+        </div>
+
+        <div class="social-buttons">
+            <button class="social-btn" onclick="socialLogin('google')">
+                <span>🔍</span> Google
+            </button>
+            <button class="social-btn" onclick="socialLogin('github')">
+                <span>📦</span> GitHub
+            </button>
+        </div>
+
+        <div class="signup-link">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggle = document.querySelector('.password-toggle');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggle.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                toggle.textContent = '👁️';
+            }
+        }
+
+        function socialLogin(provider) {
+            alert(`${provider.charAt(0).toUpperCase() + provider.slice(1)} login would be implemented here`);
+        }
+
+        document.getElementById('signinForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const username = document.getElementById('username').value;
+            
+            if (email && password) {
+                const btn = document.querySelector('.signin-btn');
+                const originalText = btn.textContent;
+                btn.textContent = 'Signing in...';
+                btn.style.background = '#999';
+                
+				fetch('/signin', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						email: email,
+						password: password,
+						username: username
+					})
+				});
+
+            }
+        });
+
+        // Add subtle animations on input focus
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+================================================
+FILE: src/db_handler.ts
+================================================
+import pgPromise from "pg-promise";
+const pgp = pgPromise();
+import { resolve } from "path";
+import { execSync } from "child_process";
+
+const DATABASE_NAME = "converSAFE_db";
+const SQL_FILES_FOLDER = resolve(__dirname, "..", "utils", "sql/") + "/";
+
+// Creates a QueryFile object that can be used by "db" for executing
+// queries
+export function sql(fileName: String) {
+    const fullPath = SQL_FILES_FOLDER + fileName
+    return new pgp.QueryFile(fullPath, {minify: true});
+} 
+
+const initCredentialTablesQuery = sql('schema.sql');
+
+export const db = pgp({
+	host: "localhost",
+	port: 5432,
+	database: DATABASE_NAME,
+	password: undefined,
+	max: 30
+});
+
+
+export async function initDatabase() {
+	try {
+		execSync(`createdb ${DATABASE_NAME}`, {stdio: "ignore"}); // Ignore the output of the command
+	} catch (error) {
+		console.log(`${DATABASE_NAME} already exists`);
+	}
+
+	try {
+		await db.none(initCredentialTablesQuery);
+	} catch (error) {
+		process.exit(1);
+	}
+}
+
+
+
+================================================
+FILE: src/login.ts
+================================================
+import { compare } from "bcrypt";
+import { db, sql } from "./db_handler";
+
+const getUserPasswordQuery = sql("login.sql");
+
+export async function authorizeUser(email: string, password: string) {
+	const storedPass = await db.oneOrNone(getUserPasswordQuery, { email: email.toLowerCase() });
+
+	if (!storedPass)
+		throw new Error("EMAIL_DOES_NOT_EXISTS");
+
+	const isCorrectPass = await compare(password, storedPass.password);
+
+	if (!isCorrectPass)
+		throw new Error("INCORRECT_PASSWORD");
+
+}
+
+
+
+================================================
+FILE: src/main.ts
+================================================
+import express, { json } from 'express';
+import https from 'https';
+import fs from 'fs';
+import path, { resolve } from 'path';
+import { initDatabase } from './db_handler';
+import { authenticateUser } from './signin';
+import { authorizeUser } from './login';
+
+const app = express();
+const PORT = 8080;
+
+app.use(json());
+
+app.route("/signin")
+	.post(async (req, res) => {
+		try {
+			await authenticateUser(req.body.username, req.body.email, req.body.password);
+		} catch (error) {
+			if (error instanceof Error && error.message === "CREDENTIAL_CONFLICT") {
+				res.status(401).send("Unauthorized. Username or email already exists");
+				return;
+			} 
+			else if (error instanceof Error && error.message === "INTERNAL_DATABASE_ERROR") {
+				res.status(505).send("Server Error");
+				return;
+			}
+		}
+
+		res.status(200).send("OK");
+})
+	.get((_req, res) => {
+		res.sendFile(resolve(__dirname, "..", "public") + "/signin.html")
+});
+
+app.route("/login")
+	.post(async(req, res) => {
+		try {
+			await authorizeUser(req.body.email, req.body.password);
+		} catch (error) {
+			if (error instanceof Error && error.message === "EMAIL_DOES_NOT_EXISTS") {
+				res.status(401).send("Email does not exists");
+				return;
+			}
+			else if (error instanceof Error && error.message === "INCORRECT_PASSWORD") {
+				res.status(401).send("Incorrect password");
+				return;
+			} 
+			else {
+				res.status(500).send("Server error");
+				return;
+			}
+		}
+		res.status(200).send("OK");
+})
+	.get((_req, res) => {
+		res.sendFile(resolve(__dirname, "..", "public") + "/login.html")
+})
+
+
+app.get('/', (_req, res) => {
+  res.send('Hello from HTTPS Express server!');
+});
+
+
+const sslOptions = {
+  key: fs.readFileSync(path.join(__dirname, '../certificates/server.key')),
+  cert: fs.readFileSync(path.join(__dirname, '../certificates/server.cert')),
+};
+
+
+https.createServer(sslOptions, app).listen(PORT, () => {
+	initDatabase();
+	console.log(`HTTPS server running at https://localhost:${PORT}`);
+});
+
+
+
+
+================================================
+FILE: src/signin.ts
+================================================
+import { db, sql } from "./db_handler";
+import { genSalt, hash } from "bcrypt";
+
+const insertNewUserQuery = sql("signin.sql");
+
+// This is a bit limited, but it'll do for a while, I have to limit the size of
+// the credentials sent by the form to avoid errors when introducing them to
+// the database
+
+export async function authenticateUser(username: string, email: string, password: string) { try {
+		let salt = await genSalt(10);
+		let hashedPass = await hash(password, salt);
+
+		let result = await db.result(insertNewUserQuery, {
+			username: username,
+			email: email.toLowerCase(), // Lowercase because all the email services have it as a standard
+			password: hashedPass,
+			salt: salt
+		});
+		
+		if (result.rowCount !== 1)
+			throw new Error("CREDENTIAL_CONFLICT")
+
+	} catch (error: any) {
+		if (error.message === "CREDENTIAL_CONFLICT") 
+			throw error;
+
+		throw new Error("INTERNAL_DATABASE_ERROR") }
+}
+
+
+
+================================================
+FILE: utils/sql/login.sql
+================================================
+SELECT password FROM credentials
+	WHERE email = ${email};
+
+
+
+================================================
+FILE: utils/sql/schema.sql
+================================================
+CREATE TABLE IF NOT EXISTS credentials (
+	id SERIAL PRIMARY KEY,
+	username VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(60) NOT NULL,
+	salt VARCHAR(16) NOT NULL
+);
+
+
+
+
+================================================
+FILE: utils/sql/signin.sql
+================================================
+INSERT INTO credentials(username, email, password, salt)
+SELECT ${username}, ${email}, ${password}, ${salt}
+WHERE NOT EXISTS (
+  SELECT 1 FROM credentials WHERE email = ${email} or username = ${username}
+);
+
+
+
